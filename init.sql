@@ -170,7 +170,7 @@ DELIMITER ;
 
 -- Usuarios
 INSERT INTO `usuario` (`correo`, `n_documento`, `nombre`, `apellidos`, `telefono`, `fec_nac`, `rol`, `passwd`) VALUES
-('admin@flexicoche.com', 12345678, 'Admin', 'Sistema', 600000000, '1990-01-01', 1, 'admin123'),
+('admin@flexicoche.com', 12345678, 'Admin', 'Sistema', 600000000, '1990-01-01', 1, '$2a$10$jur1CHjFQ/1wmZYr1639VOAeiPAtGoNf4oyD0Pi/wuI5WJ/pbcQda'), --admin123
 ('mario.moreno@email.com', 10123457, 'Mario', 'Moreno Romero', 612345687, '1983-12-18', 1, 'contraseña117'),
 ('carlos.garcia@email.com', 12345678, 'Carlos', 'García Pérez', 612345678, '1985-03-10', 0, 'contraseña123'),
 ('ana.martinez@email.com', 23456789, 'Ana', 'Martínez Sánchez', 612345679, '1990-07-22', 0, 'contraseña456'),
