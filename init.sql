@@ -66,8 +66,7 @@ CREATE TABLE `vehiculo` (
   `disponibilidad` tinyint(1) NOT NULL DEFAULT 1,  
   `n_plazas` int(2) DEFAULT NULL,
   `transmision` enum('Manual','Automática','CVT','Semiautomática','Dual-Clutch') DEFAULT NULL,
-  `localizacion` int(3) DEFAULT 30,
-  FOREIGN KEY (`localizacion`) REFERENCES `localizaciones`(`localizacion`)
+  `localizacion` int(3) DEFAULT 30
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 -- --------------------------------------------------------
