@@ -46,8 +46,8 @@ CREATE TABLE `usuario` (
 --
 CREATE TABLE `localizaciones` (
   `localizacion` int(3) NOT NULL,
-	`descripcion` varchar(50) NOT NULL
-	) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+  `descripcion` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 
 -- --------------------------------------------------------
@@ -67,7 +67,7 @@ CREATE TABLE `vehiculo` (
   `n_plazas` int(2) DEFAULT NULL,
   `transmision` enum('Manual','Automática','CVT','Semiautomática','Dual-Clutch') DEFAULT NULL,
   `localizacion` int(3) DEFAULT 30,
-  FOREIGN KEY (`localizacion`) REFERENCES `localizaciones`(`localizacion`),
+  FOREIGN KEY (`localizacion`) REFERENCES `localizaciones`(`localizacion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 -- --------------------------------------------------------
@@ -181,6 +181,55 @@ INSERT INTO `usuario` (`correo`, `n_documento`, `nombre`, `apellidos`, `telefono
 ('pedro.sanchez@email.com', 67890123, 'Pedro', 'Sánchez Martínez', 612345683, '1988-08-30', 0, 'contraseña113'),
 ('marta.gonzalez@email.com', 78901234, 'Marta', 'González García', 612345684, '1992-06-05', 0, 'contraseña114'),
 ('david.alvarez@email.com', 89012345, 'David', 'Álvarez Díaz', 612345685, '1980-04-20', 0, 'contraseña115');
+
+-- Localizaciones
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (1, 'Álava');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (2, 'Albacete');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (3, 'Alicante');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (4, 'Almería');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (5, 'Asturias');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (6, 'Ávila');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (7, 'Badajoz');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (8, 'Barcelona');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (9, 'Burgos');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (10, 'Cáceres');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (11, 'Cádiz');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (12, 'Cantabria');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (13, 'Castellón');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (14, 'Ciudad Real');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (15, 'Córdoba');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (16, 'Cuenca');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (17, 'Gerona');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (18, 'Granada');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (19, 'Guadalajara');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (20, 'Guipúzcoa');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (21, 'Huelva');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (22, 'Huesca');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (23, 'Jaén');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (24, 'La Coruña');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (25, 'La Rioja');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (26, 'León');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (27, 'Lérida');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (28, 'Lugo');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (29, 'Madrid');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (30, 'Málaga');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (31, 'Murcia');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (32, 'Navarra');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (33, 'Orense');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (34, 'Palencia');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (35, 'Pontevedra');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (36, 'Salamanca');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (37, 'Segovia');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (38, 'Sevilla');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (39, 'Soria');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (40, 'Tarragona');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (41, 'Teruel');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (42, 'Toledo');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (43, 'Valencia');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (44, 'Valladolid');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (45, 'Vizcaya');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (46, 'Zamora');
+INSERT INTO localizaciones (localizacion, descripcion) VALUES (47, 'Zaragoza');
 
 -- Vehículos
 INSERT INTO `vehiculo` (`id`, `matricula`, `marca`, `modelo`, `combustible`, `color`, `precio_dia`, `anio_matricula`, `disponibilidad`, `n_plazas`, `transmision`, `localizacion`) VALUES
@@ -296,54 +345,6 @@ INSERT INTO `vehiculo` (`id`, `matricula`, `marca`, `modelo`, `combustible`, `co
 (110, '9012WWW', 'Tesla', 'Semi', 'eléctrico', 'gris', 180, '2023-05-05', 1, 2, 'Automática', 29),
 (111, '1234XXX', 'Scania', 'Super', 'híbrido enchufable', 'blanco', 170, '2022-07-12', 1, 2, 'Manual', 38);
 
--- Localizaciones
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (1, 'Álava');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (2, 'Albacete');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (3, 'Alicante');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (4, 'Almería');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (5, 'Asturias');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (6, 'Ávila');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (7, 'Badajoz');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (8, 'Barcelona');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (9, 'Burgos');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (10, 'Cáceres');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (11, 'Cádiz');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (12, 'Cantabria');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (13, 'Castellón');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (14, 'Ciudad Real');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (15, 'Córdoba');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (16, 'Cuenca');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (17, 'Gerona');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (18, 'Granada');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (19, 'Guadalajara');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (20, 'Guipúzcoa');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (21, 'Huelva');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (22, 'Huesca');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (23, 'Jaén');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (24, 'La Coruña');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (25, 'La Rioja');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (26, 'León');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (27, 'Lérida');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (28, 'Lugo');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (29, 'Madrid');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (30, 'Málaga');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (31, 'Murcia');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (32, 'Navarra');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (33, 'Orense');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (34, 'Palencia');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (35, 'Pontevedra');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (36, 'Salamanca');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (37, 'Segovia');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (38, 'Sevilla');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (39, 'Soria');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (40, 'Tarragona');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (41, 'Teruel');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (42, 'Toledo');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (43, 'Valencia');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (44, 'Valladolid');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (45, 'Vizcaya');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (46, 'Zamora');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (47, 'Zaragoza');
 
 -- Coches
 INSERT INTO `coche` (`id_vehiculo`, `carroceria`, `puertas`, `potencia`) VALUES
