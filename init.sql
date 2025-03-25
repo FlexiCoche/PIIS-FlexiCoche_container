@@ -493,10 +493,17 @@ INSERT INTO `camion` (`id`, `id_vehiculo`, `peso_max`, `altura`, `n_remolques`, 
 (3, 111, 28000, 5.6, 3, 'Combustible', 'GH1234IJ');
 
 -- Alquileres
-INSERT INTO `alquiler` (`id_vehiculo`, `id_usuario`, `estado`, `fecha_inicio`, `fecha_fin`) VALUES
-(1, 'mario.moreno@email.com', 'en alquiler', '2025-02-01', '2025-02-05'),
-(2, 'carlos.garcia@email.com', 'a pagar', '2025-02-02', '2025-02-06'),
-(3, 'ana.martinez@email.com', 'procesando', '2025-02-03', '2025-02-07');
+INSERT INTO `alquiler` (`id`, `id_vehiculo`, `id_usuario`, `estado`, `fecha_inicio`, `fecha_fin`) VALUES
+(1, 1, 'mario.moreno@email.com', 'en alquiler', '2025-02-01', '2025-02-05'),
+(2, 2, 'carlos.garcia@email.com', 'a pagar', '2025-02-02', '2025-02-06'),
+(3, 3, 'ana.martinez@email.com', 'procesando', '2025-02-03', '2025-02-07'),
+(4, 4, 'juan.rodriguez@email.com', 'denegado', '2025-02-04', '2025-02-08'),
+(5, 5, 'laura.fernandez@email.com', 'en alquiler', '2025-02-05', '2025-02-09'),
+(6, 6, 'jose.lopez@email.com', 'devuelto', '2025-02-06', '2025-02-10'),
+(7, 7, 'pedro.sanchez@email.com', 'retraso', '2025-02-07', '2025-02-11'),
+(8, 8, 'marta.gonzalez@email.com', 'a pagar', '2025-02-08', '2025-02-12'),
+(9, 9, 'silvia.ortega@email.com', 'procesando', '2025-02-09', '2025-02-13'),
+(10, 10, 'tomas.perez@email.com', 'en alquiler', '2025-02-10', '2025-02-14');
 
 -- Facturas
 INSERT INTO `factura` (`id`, `id_alquiler`, `importe`) VALUES
