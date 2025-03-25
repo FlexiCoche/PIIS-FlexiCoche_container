@@ -511,7 +511,6 @@ INSERT INTO `factura` (`id`, `id_alquiler`, `importe`) VALUES
 (9, 9, 240),
 (10, 10, 230);
 
-
 -- Finalización
 COMMIT;
 
