@@ -40,15 +40,14 @@ CREATE TABLE `usuario` (
   `passwd` varchar(80) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
+-- --------------------------------------------------------
+-- Estructura de tabla para `localizacion`
+-- --------------------------------------------------------
 
---
--- Estructura de tabla para `Localizaciones`
---
-CREATE TABLE `localizaciones` (
+CREATE TABLE IF NOT EXISTS `localizacion` (
   `localizacion` int(3) NOT NULL,
   `descripcion` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
-
 
 -- --------------------------------------------------------
 -- Estructura de tabla para la tabla `vehiculo`
@@ -206,55 +205,55 @@ INSERT INTO `usuario` (`correo`, `n_documento`, `nombre`, `apellidos`, `telefono
 ('silvia.ortega@email.com', 99901234, 'Silvia', 'Ortega Herrera', 612345705, '1993-07-21', 0, NULL, 'contraseña135'),
 ('tomas.perez@email.com', 99912345, 'Tomás', 'Pérez Sánchez', 612345706, '1989-03-05', 0, NULL, 'contraseña136');
 
-
 -- Localizaciones
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (1, 'Álava');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (2, 'Albacete');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (3, 'Alicante');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (4, 'Almería');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (5, 'Asturias');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (6, 'Ávila');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (7, 'Badajoz');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (8, 'Barcelona');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (9, 'Burgos');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (10, 'Cáceres');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (11, 'Cádiz');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (12, 'Cantabria');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (13, 'Castellón');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (14, 'Ciudad Real');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (15, 'Córdoba');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (16, 'Cuenca');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (17, 'Gerona');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (18, 'Granada');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (19, 'Guadalajara');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (20, 'Guipúzcoa');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (21, 'Huelva');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (22, 'Huesca');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (23, 'Jaén');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (24, 'La Coruña');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (25, 'La Rioja');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (26, 'León');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (27, 'Lérida');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (28, 'Lugo');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (29, 'Madrid');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (30, 'Málaga');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (31, 'Murcia');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (32, 'Navarra');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (33, 'Orense');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (34, 'Palencia');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (35, 'Pontevedra');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (36, 'Salamanca');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (37, 'Segovia');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (38, 'Sevilla');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (39, 'Soria');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (40, 'Tarragona');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (41, 'Teruel');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (42, 'Toledo');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (43, 'Valencia');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (44, 'Valladolid');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (45, 'Vizcaya');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (46, 'Zamora');
-INSERT INTO localizaciones (localizacion, descripcion) VALUES (47, 'Zaragoza');
+INSERT INTO `localizacion` (localizacion, descripcion) VALUES 
+(1, 'Álava'),
+(2, 'Albacete'),
+(3, 'Alicante'),
+(4, 'Almería'),
+(5, 'Asturias'),
+(6, 'Ávila'),
+(7, 'Badajoz'),
+(8, 'Barcelona'),
+(9, 'Burgos'),
+(10, 'Cáceres'),
+(11, 'Cádiz'),
+(12, 'Cantabria'),
+(13, 'Castellón'),
+(14, 'Ciudad Real'),
+(15, 'Córdoba'),
+(16, 'Cuenca'),
+(17, 'Gerona'),
+(18, 'Granada'),
+(19, 'Guadalajara'),
+(20, 'Guipúzcoa'),
+(21, 'Huelva'),
+(22, 'Huesca'),
+(23, 'Jaén'),
+(24, 'La Coruña'),
+(25, 'La Rioja'),
+(26, 'León'),
+(27, 'Lérida'),
+(28, 'Lugo'),
+(29, 'Madrid'),
+(30, 'Málaga'),
+(31, 'Murcia'),
+(32, 'Navarra'),
+(33, 'Orense'),
+(34, 'Palencia'),
+(35, 'Pontevedra'),
+(36, 'Salamanca'),
+(37, 'Segovia'),
+(38, 'Sevilla'),
+(39, 'Soria'),
+(40, 'Tarragona'),
+(41, 'Teruel'),
+(42, 'Toledo'),
+(43, 'Valencia'),
+(44, 'Valladolid'),
+(45, 'Vizcaya'),
+(46, 'Zamora'),
+(47, 'Zaragoza');
 
 -- Vehículos
 INSERT INTO `vehiculo` (`id`, `matricula`, `marca`, `modelo`, `combustible`, `color`, `precio_dia`, `anio_matricula`, `disponibilidad`, `n_plazas`, `transmision`, `localizacion`) VALUES
@@ -370,6 +369,13 @@ INSERT INTO `vehiculo` (`id`, `matricula`, `marca`, `modelo`, `combustible`, `co
 (110, '9012WWW', 'Tesla', 'Semi', 'eléctrico', 'gris', 180, '2023-05-05', 1, 2, 'Automática', 29),
 (111, '1234XXX', 'Scania', 'Super', 'híbrido enchufable', 'blanco', 170, '2022-07-12', 1, 2, 'Manual', 38);
 
+-- Imágenes
+INSERT INTO `imagen` (`id_vehiculo`, `imagen`) VALUES
+(1, 'ford-fiesta.png'),
+(2, 'toyota-corolla.png'),
+(3, 'bmwx5.png'),
+(4, 'audi-a3.png'),
+(5, 'kia-rio.png');
 
 -- Coches
 INSERT INTO `coche` (`id`, `id_vehiculo`, `carroceria`, `puertas`, `potencia`) VALUES
