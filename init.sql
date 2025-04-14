@@ -30,7 +30,7 @@ USE `flexicoche`;
 
 CREATE TABLE `usuario` (
   `correo` varchar(40) PRIMARY KEY,
-  `n_documento` int(10) DEFAULT NULL,
+  `n_documento` varchar(15) DEFAULT NULL,
   `nombre` varchar(30) NOT NULL,
   `apellidos` varchar(50) NOT NULL,
   `telefono` int(9) DEFAULT NULL,
