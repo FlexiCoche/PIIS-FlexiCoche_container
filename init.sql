@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `localizacion` (
 -- --------------------------------------------------------
 
 CREATE TABLE `vehiculo` (
-  `id` int(11) PRIMARY KEY NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `matricula` varchar(10) NOT NULL UNIQUE,
   `marca` varchar(20) NOT NULL,
   `modelo` varchar(20) DEFAULT NULL,
@@ -65,7 +65,8 @@ CREATE TABLE `vehiculo` (
   `disponibilidad` tinyint(1) NOT NULL DEFAULT 1,  
   `n_plazas` int(2) DEFAULT NULL,
   `transmision` enum('Manual','Automática','CVT','Semiautomática','Dual-Clutch') DEFAULT NULL,
-  `localizacion` int(3) DEFAULT 30
+  `localizacion` int(3) DEFAULT 30,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 -- --------------------------------------------------------
